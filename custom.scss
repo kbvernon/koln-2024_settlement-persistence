@@ -1,0 +1,295 @@
+/*-- scss:defaults --*/
+
+$main-font: Arial, Source Sans Pro, Helvetica, sans-serif;
+
+/* primary palette */
+$rich-black:        #001524;
+$caribbean-current: #15616D; 
+$papaya-whip:       #FFECD1;
+$orange-wheel:      #FF7D00;
+$sienna:            #78290F;
+
+/* lighter and darker shades */
+$moonstone:         #24A8BC;
+$gunmetal:          #0A2E33;
+$burnt-orange:      #B85900;
+$sinopia:           #C84419;
+$penn-red:          #9a0000;
+$black-bean:        #361307;
+
+/* Brewer Colors YlOrBr */
+$light-yellow:      #FFFFE5;
+$princeton-orange:  #FE9929;
+$seal-brown:        #662506;
+
+/* bootstrap 5 grayscale */
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+ 
+$presentation-h2-font-size: 2em;
+
+/*-- scss:rules --*/
+
+.reveal {
+  font-family: var(--r-main-font);
+  color: $gray-900;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: $main-font;
+  color: $gray-900;
+  font-weight: 600;
+}
+
+.black {
+  color: $rich-black;
+}
+
+.blue {
+  color: $caribbean-current;
+}
+
+.pale {
+  color: $papaya-whip;
+}
+
+.orange {
+  color: $orange-wheel;
+}
+
+.brown {
+  color: $sienna;
+}
+
+.gray-500 {
+  color: $gray-600;
+}
+
+.gray-600 {
+  color: $gray-600;
+}
+
+.gray-700 {
+  color: $gray-600;
+}
+
+.gray-800 {
+  color: $gray-600;
+}
+
+.gray-800 {
+  color: $gray-600;
+}
+
+.large {
+  font-size: 1.2em;
+}
+
+.small {
+  font-size: 0.85em;
+}
+
+.heavy {
+    font-weight: 600;
+}
+
+.reveal .slides a {
+  color: $sienna;
+  border-bottom: 1px solid $sienna;
+}
+
+.reveal .slides a:hover {
+  color: $orange-wheel;
+  border-bottom: 1px solid $orange-wheel;
+}
+
+.reveal strong, b {
+  color: $sienna;  
+}
+
+.reveal .slides .slide {
+  margin: 0.85em;
+}
+
+.reveal img {
+  margin: 0;
+}
+
+.no-top-margin p {
+  margin-top: 0;
+}
+
+.horizontal-center {
+  text-align: center;
+}
+
+.horizontal-center aside {
+  width: 100%;
+}
+
+/* FRAGMENT STUFF */
+.flt .fragment {
+  margin: 0 auto auto 0 !important;
+}
+
+.reveal .slides section .fragment.stay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.legend-key {
+  width: 1em; 
+  height: 1em; 
+  display: inline-block; 
+  border: 1px solid gray; 
+  transform: translateY(15%);
+}
+
+#key-low {
+  background-color: $light-yellow;
+}
+
+#key-med {
+  background-color: $princeton-orange;
+}
+
+#key-high {
+  background-color: $seal-brown;
+}
+
+.legend-label {
+  margin-left: 0.1em;
+  margin-right: 0.3em;
+}
+
+.no-p-margin p {
+  margin: 0;
+}
+
+.reveal table.conclusions {
+  width: 100%;
+  margin: 1em 0;
+}
+
+.reveal table.conclusions td {
+  vertical-align: top;
+  padding: 0.2em 0.2em 0.2em 0;
+  border: none;
+}
+
+.reveal table.conclusions td:nth-child(1) {
+  color: $gray-600;
+}
+
+.reveal table.conclusions td:nth-child(2) {
+  font-size: 1em;
+  font-weight: 700;
+  width: 280px;
+  max-width: 280px;
+}
+
+.reveal table.conclusions td:nth-child(3) {
+  color: $gray-600;
+}
+
+.reveal table#weaknesses caption {
+  color: $caribbean-current;
+}
+
+.reveal table#weaknesses td:nth-child(2) {
+  color: $caribbean-current;
+}
+
+.reveal table#strengths caption {
+  color: $sienna;
+}
+
+.reveal table#strengths td:nth-child(2) {
+  color: $sienna;
+}
+
+.v-center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+}
+
+.hide-empty-h2 > h2:first-child {
+  margin: 0;
+}
+
+/* TITLE SLIDE */
+.reveal .slides .title-left {
+  margin: 0.5em 0.85em 0.85em 0.85em;
+}
+
+.title-left h2 {
+  font-size: 2.1em !important;
+  color: white;
+  line-height: 1.2em;
+  font-weight: 700 !important;
+  margin: 0;
+}
+
+.title-left .title-top {
+  margin: 0.5em 0 0 0;
+  color: white;
+  font-size: 1em;
+}
+
+.title-left .title-top p {
+  margin: 0;
+}
+
+.title-left .title-bottom {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.1em;
+}
+
+.title-left .title-bottom p {
+  margin: 0.2em 0 0 0;
+  color: white;
+}  
+
+.title-left .title-bottom a {
+  color: white;
+  border-bottom: 1px solid $rich-black;
+}  
+
+.center h2 {
+  text-align: center;
+}
+
+.title-left {
+  font-weight: 700 !important;
+  text-shadow: 
+    -2px -2px 2px black,
+    2px 2px 2px black,
+    -2px 2px 2px black,
+    2px -2px 2px black !important;
+}
+
+.title-left h2 {
+  text-shadow: 
+    -3px -3px 2px black,
+    3px 3px 2px black,
+    -3px 3px 2px black,
+    3px -3px 2px black !important;
+}
+
+figcaption {
+  display: none;
+}

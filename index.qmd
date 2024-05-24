@@ -1,0 +1,240 @@
+---
+format: 
+  revealjs: 
+    theme: [default, custom.scss]
+    height: 1080
+    width: 1920
+    auto-stretch: false
+    slide-number: true
+execute:
+  echo: false
+engine: knitr
+---
+
+## The network ecology of settlement persistence {.title-left background-image="figures/desert-banner.png" background-size="contain"}
+
+::: title-top
+K. Blake Vernon, Simon Brewer, Brian Codding, and Scott Ortman
+:::
+
+::: title-bottom
+`r Sys.Date()`
+
+[{{< fa brands github >}} kbvernon/koln-2024_settlement-persistence](https://github.com/kbvernon/koln-2024_settlement-persistence){style="padding-left: 0.3rem;"}
+:::
+
+## {.center}
+
+[Question]{.menu-title style="display:none"}
+
+::: {style="font-size:2.5em; text-align: center;"}
+Why do some human settlements last longer than others?
+:::
+
+## Inspiration
+
+:::{#fig-shoutout}
+[![](figures/shout-out.png){width=80% style="margin: 1.5em 0, 0.5em 0;"}](https://doi.org/10.1016/j.jasrep.2024.104515)
+:::
+
+## Is settlement persistence an inherent good?
+
+**No**, its value derives from the contribution it makes to human life and well-being.
+
+::: {#fig-value-of-persistence}
+![](figures/value-of-persistence.png){width=75% style="margin-top: 2em;"}
+:::
+
+## The Lord Baron model
+
+Goal is to maximize $F$ given trade-off between [$P$rimary]{.blue} and [$S$ocial]{.orange} production, with $A$ controlling the rate at which primary production declines with increased $R$ ([Renfrew and Poston 1979](https://doi.org/10.1016/B978-0-12-586050-5.50033-6)).
+
+$$F(R) = P(R) + S(R)$$
+
+::: {#fig-renfrew-model}
+![](figures/renfrew-model.png){width=75% style="margin: 1em 0 0.7em 0;"}
+:::
+
+This anticipates many of the ideas that have come to be known as settlement scaling theory ([Ortman et al 2014](https://doi.org/10.1371/journal.pone.0087902)).
+
+## Settlement dynamics
+
+Lord Baron assumes that settlement is a dynamic system with multiple, discontinuous equilibrium states.
+
+::: {#fig-renfrew-disequilibrium}
+![](figures/renfrew-bifurcation.png){width=30% style="margin: 1.5em 0 1em 0;"}
+:::
+
+A1 is the "break point", A2 the "sustain point" ([Fujita, Krugman, Venables 1999](https://doi.org/10.7551/mitpress/6389.001.0001))
+
+## Scaling effects
+
+$R$ can be thought of as the per capita contribution of an individual to the "public good." And, the sigmoid shape of $S$ suggests that everyone gets slightly more out of the village than they put in, especially early on.
+
+::: {#fig-public-good}
+![](figures/public-good.png){width=35% style="margin: 1em 0 1em 0;"}
+:::
+
+## Collective Action Problem
+
+Lord Baron assumes per capita costs and benefits, so it can't account for asymmetric interactions (i.e., free-riders, Tories, the 1%, etc). And, if you can't get buy-in, the whole system unravels (like a GoFundMe).
+
+::: {#fig-public-good}
+![](figures/public-good.png){width=35% style="margin: 1em 0 1em 0;"}
+:::
+
+This is a problem for Lord Baron as an explanation for the **origins** of urban agglomerations.
+
+## But, what about persistence?!
+
+Read it from left to right, starting with the village equilibrium state.
+
+::: {#fig-renfrew-disequilibrium2}
+![](figures/renfrew-bifurcation.png){width=30% style="margin: 1.5em 0 0.75em 0;"}
+:::
+
+"Agglomerations, once established, are usually able to survive even under conditions that would not cause them to form in the first place" (Fujita, Krugman, Venables 1999). 
+
+## Expectations
+
+1. Agglomerated systems should persist longer than dispersed systems.  
+2. Everyone should be "better off" in an agglomeration system, whether they are 
+    - profiting off that system or  
+    - trapped in it, having no viable alternative.
+
+## {background-image="figures/overview-map.png" background-size="contain"}
+
+[Study area]{.menu-title style="display:none"}
+
+## Unit of analysis {.center style="text-align: center;"}
+
+Discretized spatial and temporal units.
+
+::: {#fig-unit-of-analysis}
+![](figures/unit-of-analysis.png){width=45% style="margin: 0.5em 0 0.5em 0;"}
+:::
+
+## Population
+
+Estimated for each grid cell using Uniform Probability Density Analysis ([Ortman 2016](https://doi.org/10.1007/s10816-014-9227-6)).
+
+::: {#fig-population}
+![](figures/population-reconstruction.png){width=60% style="margin: 0.5em 0 0.75em 0;"}
+:::
+
+## Duration
+
+Derived by applying threshold to population reconstruction.  
+
+::: {#fig-duration}
+![](figures/settlement-duration.png){width=70% style="margin: 1em 0 0.75em 0;"}
+:::
+
+## Agglomeration
+
+Based on population distribution within travel time $t$ of a focal grid cell.
+
+::: {#fig-agglomeration}
+![](figures/agglomeration.png){width=70% style="margin: 1em 0 0.75em 0;"}
+:::
+
+If you squint, this looks like a proxy for spatial network centrality.
+
+## Climate
+
+Reconstructed using paleoCAR ([Bocinsky and Kohler 2014](https://doi.org/10.1038/ncomms6618)).  
+
+::: {#fig-climate}
+![](figures/climate-reconstruction.png){width=65% style="margin: 0.75em 0 0.75em 0;"}
+:::
+
+## Survival analysis
+
+What explains the amount of time $T$ that passes before a settlement is abandoned? 
+
+$$
+\begin{aligned}
+T &\sim f(t)\\
+S(t) &= Pr(T > t) = \int_{t}^{\infty} f(u)du\\
+h(t) &= \frac{f(t)}{S(t)}
+\end{aligned}
+$$
+
+with  
+
+- $S(t)$ being the survival function and  
+- $h(t)$ the hazard rate: the number of settlements you can expect to be abandoned at $t$ *given that they persisted up to* $t$. 
+
+## Discrete-time proportional hazards
+
+The hazard rate gives the expectation for $T$, which is normally assumed to be continuous. This is implausible in an archaeological context, so we switch to discrete time and model the hazard rate using ordinary logistic regression.
+
+$$
+\begin{aligned}
+E(T) &= h(t)\\
+logit(h(t)) &= \alpha + \beta X + \epsilon
+\end{aligned}
+$$
+
+Going to use Random Forest for this because it does not require an assumption about the distribution of $T$.  
+
+$X$: maximum agglomeration, maximum population, Maize GDD per time step, PPT per time step, initial start date, and region.  
+
+To handle spatial autocorrelation, the model also includes the first two principal components derived by applying PCA to the full cost-distance matrix (similar to MESF).
+
+## Just for fun...
+
+here's the R code for this implementation of RF.
+
+```{r}
+#| echo: true
+#| code-line-numbers: false
+#| eval: false
+
+persistence_model <- randomForest(
+  leave ~ time_step 
+  + population + agglomeration 
+  + ppt + gdd 
+  + start + region
+  + PC1 + PC2,
+  data = as.data.frame(persistence),
+  sampsize = c("0" = round(n/5), "1" = n),
+  ntree = 2000,
+  importance = TRUE
+)
+
+```
+
+The `sampsize = c("0" = round(n/5), "1" = n)` argument is an overreaction to the fact that class imbalance is huge in this case.  
+
+## Hazard rate
+
+For illustration purposes.
+
+::: {#fig-hazard}
+![](figures/hazard-rate.png){width=70% style="margin: 1em 0 0.75em 0;"}
+:::
+
+## Lingering issues
+
+Probably in order of importance...
+
+1. Need to build population reconstruction using deep learning ([Reese 2021](https://doi.org/10.1016/j.jas.2021.105413)) to generate estimates using the entire tree ring record, rather than type sites.  
+2. A better way of measuring agglomeration.  
+2. Need a more fine-grained climate reconstruction. Currently, can only get to approximately 1-km resolution.  
+4. Would like to use standard regression for inference.  
+4. Might need to include lags.
+
+## Acknowledgments {background-image="figures/acknowledgments.png" background-size="contain"}
+
+<br><br>
+
+- Matt Peeples
+- Peter Yaworsky
+- Weston McCool
+- Josh Watts
+- The `{extendr}` crew
+
+<br><br><br>
+
+And thanks to Andreas and Eleftheria for organizing!
