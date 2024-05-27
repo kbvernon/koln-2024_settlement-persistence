@@ -35,14 +35,25 @@ __Authors:__ K. Blake Vernon, Simon Brewer, Brian Codding, and Scott Ortman
 
 Bocinsky, R. K., & Kohler, T. A. (2014). A 2,000-year reconstruction of the rain-fed maize agricultural niche in the US Southwest. Nature Communications, 5(1), 5618.
 Bocinsky, R. K., Rush, J., Kintigh, K. W., & Kohler, T. A. (2016). Exploration and exploitation in the macrohistory of the pre-Hispanic Pueblo Southwest. Science Advances, 2(4), e1501532.  
-Bocinsky K., Gillreath-Brown A., Kintigh K., Kinzig A., Kohler T., Lee A., Ludäscher B., McPhillips T. (2023). Synthesizing Knowledge of Past Environments (SKOPE) Web Application (version v2023.10). DOI: 10.5281/zenodo.8415956 URL: https://app.openskope.org
+
+Bocinsky K., Gillreath-Brown A., Kintigh K., Kinzig A., Kohler T., Lee A., Ludäscher B., McPhillips T. (2023). Synthesizing Knowledge of Past Environments (SKOPE) Web Application (version v2023.10). DOI: 10.5281/zenodo.8415956 URL: https://app.openskope.org  
+
 Campbell, M. J., Dennison, P. E., & Thompson, M. P. (2022). Predicting the variability in pedestrian travel rates and times using crowdsourced GPS data. Computers, Environment and Urban Systems, 97, 101866.  
+
 Dale, M. R. (2017). Applying graph theory in ecological research. Cambridge University Press.  
+
 Fortin, M. J., Dale, M. R., and Brimacombe, C. (2021). Network ecology in dynamic landscapes. R. Soc. B. 288: 20201889. http://doi.org/10.1098/rspb.2020.1889  
+
 Geisberger, R., Sanders, P., Schultes, D., & Delling, D. (2008). Contraction hierarchies: Faster and simpler hierarchical routing in road networks. In Experimental Algorithms: 7th International Workshop, WEA 2008 Provincetown, MA, USA, May 30-June 1, 2008 Proceedings 7 (pp. 319-333). Springer Berlin Heidelberg.  
+
 Gómez-Rubio, V. (2020). Bayesian Inference with INLA. Chapman & Hall/CRC Press. Boca Raton, FL.  
+
 Kohler, T. A., Bocinsky, R. K., Cockburn, D., Crabtree, S. A., Varien, M. D., Kolm, K. E., ... & Kobti, Z. (2012). Modelling prehispanic Pueblo societies in their ecosystems. Ecological Modelling, 241, 30-41.  
+
 Mills, Barbara J., Jeffery J. Clark, Matthew A. Peeples, W. R. Haas, Jr., John M. Roberts, Jr., J. Brett Hill, Deborah L. Huntley, Lewis Borck, Ronald L. Breiger, Aaron Clauset, M. Steven Shackley (2013). The Transformation of Social Networks in the Late Pre-Hispanic U.S. Southwest. Proceedings of the National Academy of Sciences 110(15):5785-5790.  
+
 Suresh, K., Severn, C. & Ghosh, D. Survival prediction models: an introduction to discrete-time modeling. BMC Med Res Methodol 22, 207 (2022). https://doi.org/10.1186/s12874-022-01679-6  
+
 Mills, Barbara, Sudha Ram, Jeffery Clark, Scott Ortman, and Matthew Peeples. (2020). "cyberSW Version 1.0." Archaeology Southwest, Tucson.  
+
 Ortman, S. G., Lobo, J., & Smith, M. E. (2020). Cities: Complexity, theory and history. Plos one, 15(12), e0243621.  
